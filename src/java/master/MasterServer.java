@@ -126,7 +126,6 @@ public class MasterServer {
                 }
             } catch (IOException | InterruptedException e) {
                 // When an exception occurs, we assume the worker has disconnected.
-            }
             } finally {
                 synchronized (workers) {
                     workers.remove(this);
@@ -135,7 +134,7 @@ public class MasterServer {
                 try {
                     socket.close();
                 } catch (IOException e) {
-                    // Ignore errors on close.
+                    // Ignore all errors on close.
                 }
             }
         }
