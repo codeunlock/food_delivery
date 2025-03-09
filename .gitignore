@@ -27,3 +27,13 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+# Ignore everything
+*
+
+# But allow directories (so Git can traverse them)
+!*/
+
+# Allow only .java files in any directory
+!*.java
+
